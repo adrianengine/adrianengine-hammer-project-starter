@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    $BLOCKS
+\*------------------------------------*/
+
+/* SVG Icons Style ----------- */
+.icon {
+	@include transition(fill 300ms ease-out);
+    display: inline-block;
+    fill: currentColor;
+    height: 1em;
+    vertical-align: middle;
+    width: 1em;
+}

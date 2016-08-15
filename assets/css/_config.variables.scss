@@ -1,0 +1,154 @@
+/*------------------------------------*\
+    $BASE VARIABLES
+\*------------------------------------*/
+
+/**
+ * Social Colors Map
+ */
+
+$theme-colors: (
+	"bandcamp": #4E9BAC,
+	"behance": #0076FF,
+	"codepen": #616F67,
+	"delicious": #248CFF,
+	"dribbble": #EA4C89,
+	"facebook": #3B5998,
+	"ficly": #B51C2C,
+	"flickr": #0063DB,
+	"github": #4183C4,
+	"google-plus": #DD4B39,
+	"instagram": #517FA4,
+	"kickstarter": #76CC1E,
+	"lanyrd": #152E51,
+	"lastfm": #D51007,
+	"linkedin": #007BB6,
+	"photodrop": #CDB6E3,
+	"pinterest": #CB2027,
+	"rdio": #0088DA,
+	"rss": #F90,
+	"soundcloud": #F60,
+	"twitter": #00ACED,
+	"vimeo": #1AB7EA,
+	"youtube": #B00,
+
+	"avvillas": #0059AB,
+	"nasvisual": #B35B1D,
+	"sancho": #DB2E1E,
+	"mail": #090
+);
+
+$social-colors: vimeo, twitter, google-plus, facebook, rss;
+
+
+
+
+/**
+ * Theme colors
+ */
+
+// Greyscale palette
+// ------------------------------------------------
+$black: #070F17;
+
+$gray-1: #192028;
+$gray-2: #ACACAC;
+$gray-3: #DEE0E2;
+
+$gray--90: #444;
+$gray--80: darken(white, 80%);
+$gray--70: #666;
+$gray--60: darken(white, 60%);
+$gray--50: #999;
+$gray--40: darken(white, 40%);
+$gray--30: darken(white, 30%);
+$gray--20: #ddd;
+$gray--10: darken(white, 10%);
+$gray--00: white;
+
+$white: #F9F9F9;
+
+// Extended palette
+// Should be replace with theme colors
+// ------------------------------------------------
+$blue: #006080;
+$green: #9BC204;
+$orange: #FF7202;
+$purple: #CE3677;
+$red: #EE3423;
+
+// Default text colors
+// ------------------------------------------------
+$text-color--default: $black;
+$text-color--alpha: $gray--80;
+$text-color--beta: $gray--50;
+$heading-color--alpha: $gray--90;
+
+// Background colors
+// ------------------------------------------------
+$background-color--default: $white;
+$background-color--alpha: $gray-1;
+$background-color--beta: $gray-2;
+$background-color--gamma: $gray-3;
+$background-color--delta: $blue;
+
+// Fill colors
+// ------------------------------------------------
+$fill-color--alpha: $blue;
+$fill-color--beta: $gray--40;
+
+// Link colors
+// ------------------------------------------------
+$link-color--alpha: $blue;
+$link-color-hover--alpha: $blue;
+$link-color--beta: $gray--40;
+$link-color-hover--beta: $gray--90;
+$link-color-hover--gamma: $gray--90;
+
+// Border colors
+// ------------------------------------------------
+$border-color--alpha: $gray--90;
+$border--default: 1px solid $black;
+
+// Higlight Selection colors
+// ------------------------------------------------
+$highlight-color--alpha: $blue;
+
+
+
+
+/**
+ * Font Stack Definition
+ */
+
+$fallback: $helvetica;
+$heading-font: 'futura-pt', $fallback;
+$body-font: 'open-sans', $fallback;
+$pull-font: 'museo-slab', $georgia;
+
+%font-stack--fallback {
+	font-family: $fallback;
+}
+
+%font-stack--body {
+	@extend %font-stack--fallback;
+
+	.wf-active & {
+	    font-family: $body-font;
+	}
+}
+
+%font-stack--headers {
+	@extend %font-stack--fallback;
+
+	.wf-active & {
+	    font-family: $heading-font;
+	}
+}
+
+%font-stack--pull {
+	font-family: $georgia;
+
+	.wf-active & {
+	    font-family: $pull-font;
+	}
+}

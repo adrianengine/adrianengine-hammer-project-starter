@@ -1,0 +1,39 @@
+// Globally applicable state styles only!
+// For general-purpose classes meant to override values, name them beginning with an underscore.
+// This will make it easy to differentiate them from modifiers defined in the component.
+// Underscores also look a bit ugly which is an intentional side effect: using too many helpers should be discouraged.
+// http://rscss.io/helpers.html
+
+._hidden {
+	display: none;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+._visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	// Extends the .is-visually-hidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+	&._focusable {
+		&:active,
+		&:focus {
+			clip: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			position: static;
+			width: auto;
+		}
+	}
+}
+
+// Hide visually and from screenreaders, but maintain layout
+._invisible {
+	visibility: hidden;
+}

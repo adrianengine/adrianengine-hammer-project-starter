@@ -1,0 +1,15 @@
+@mixin icon-colors {
+	@each $icon in $social-colors {
+		$bgcolor: map-get($theme-colors, $icon);
+
+		&--#{$icon} {
+			background-color: $bgcolor;
+
+			&:hover,
+			&:focus {
+				background-color: $white;
+				color: $bgcolor;
+			}
+		}
+	}
+}
